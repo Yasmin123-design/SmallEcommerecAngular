@@ -1,0 +1,39 @@
+/* input-field.component.css */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper.with-icon i {
+  position: absolute;
+  left: 12px;
+  color: #777;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  /* padding-left: { icon ? '40px' : '14px' }; */
+    padding-left: 14px; /* هنا قيمة ثابتة */
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a86e8;
+  box-shadow: 0 0 0 3px rgba(74, 134, 232, 0.2);
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}

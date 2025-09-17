@@ -1,0 +1,10 @@
+<!-- button.component.html -->
+<button
+  class="custom-button"
+  [class.loading]="isLoading"
+  (click)="handleClick()"
+  [disabled]="isLoading">
+
+  <span *ngIf="!isLoading">{{ label }}</span>
+  <div *ngIf="isLoading" class="spinner"></div>
+</button>

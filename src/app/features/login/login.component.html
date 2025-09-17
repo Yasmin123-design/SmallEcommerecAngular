@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2 style="margin-bottom: 30px;">Login</h2>
+
+    <app-input-field
+      type="email"
+      [(value)]="email">
+    </app-input-field>
+
+    <app-input-field
+      type="password"
+      [(value)]="password">
+    </app-input-field>
+
+    <app-button
+      label="Login"
+      (onClick)="login()">
+    </app-button>
+
+
+    <p *ngIf="error" class="error">{{ error }}</p>
+  </div>
+</div>

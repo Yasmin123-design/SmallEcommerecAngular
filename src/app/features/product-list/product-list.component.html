@@ -1,0 +1,15 @@
+<!-- <img src="https://smallecommerece-fedmepdab6ghamd8.canadacentral-01.azurewebsites.net/images/a3601cc1-9d8e-43bd-9bc4-cd3ed582d42b.jpg"/> -->
+
+<div class="products-container">
+  <h2>Product List</h2>
+  <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="getImageUrl(product.imagePath)" [alt]="product.name"/>
+      <h3>{{ product.name }}</h3>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+  </div>
+</div>
+
+
+

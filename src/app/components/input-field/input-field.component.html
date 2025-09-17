@@ -1,0 +1,12 @@
+<!-- input-field.component.html -->
+<div class="input-container">
+  <div class="input-wrapper" [class.with-icon]="icon">
+    <i *ngIf="icon" class="material-icons">{{ icon }}</i>
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      (input)="onInputChange($event)"
+      class="form-input">
+  </div>
+</div>
