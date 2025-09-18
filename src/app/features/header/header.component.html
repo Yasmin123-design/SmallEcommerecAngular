@@ -1,6 +1,8 @@
 <nav>
   <a routerLink="/login">Login</a>
 
+  <a routerLink="/register">Register</a>
+
   <a *ngIf="isLoggedIn$ | async" routerLink="/products">Products</a>
 
   <button *ngIf="isLoggedIn$ | async" (click)="logout()">Logout</button>

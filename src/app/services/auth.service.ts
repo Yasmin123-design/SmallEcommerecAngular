@@ -8,6 +8,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 })
 export class AuthService {
     private apiUrl = 'https://smallecommerece-fedmepdab6ghamd8.canadacentral-01.azurewebsites.net/api/user/login';
+    private apiUrl2 = 'https://smallecommerece-fedmepdab6ghamd8.canadacentral-01.azurewebsites.net/api/user/register';
     private loggedIn = new BehaviorSubject<boolean>(false);
     isLoggedIn$ = this.loggedIn.asObservable();
 
@@ -38,4 +39,7 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+    register(userData: any): Observable<any> {
+    return this.http.post(this.apiUrl2, userData);
+  }
 }
